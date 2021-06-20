@@ -1,0 +1,17 @@
+version: '3.8'
+
+networks:
+   default:
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: conference
+     ports: 
+     - 3307:3307
+     volumes:
+     - D:\Professional\All_Projects\my_projects\Github\docker\mysql\data:/var/lib/mysql
+     - D:\Professional\All_Projects\my_projects\Github\docker\mysql\conf.d:/etc/mysql/conf.d
+     environment:
+       MYSQL_ROOT_PASSWORD: pass
+       MYSQL_DATABASE: conference 
